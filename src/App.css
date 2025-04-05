@@ -1,0 +1,86 @@
+.app {
+  display: flex;
+  width: 100vw;
+}
+
+.sidebar {
+  width: 15vw;
+  position: fixed;
+  left: 0px;
+  top: auto;
+  height: 100vh;
+  background-color: rgba(199, 199, 199, 0.182);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* z-index: 10; */
+}
+
+.sidebar-links-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sidebar-btn {
+  padding: 10px 20px;
+  width: 250px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid white;
+  border-radius: 100px;
+
+  font-size: 30px;
+  letter-spacing: 1px;
+
+  -webkit-box-shadow: -1px 5px 15px -8px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: -1px 5px 15px -8px rgba(0, 0, 0, 0.27);
+  box-shadow: -1px 5px 15px -8px rgba(0, 0, 0, 0.27);
+}
+
+.page-div {
+  position: absolute;
+  right: 0px;
+  width: 85vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  /* background-color: rgb(255, 0, 0); */
+}
+
+.page {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+}
+.prev-page {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+}
+
+/* these part add for page landing animations */
+.right-left {
+  animation: right_left 1s ease-out forwards;
+}
+.right_left {
+  animation: right__left 1s ease-out forwards;
+}
+@keyframes right_left {
+  0% {
+    translate: 100vw 0px;
+  }
+  100% {
+    translate: 0vw 0px;
+  }
+}
+@keyframes right__left {
+  0% {
+    translate: 100vw 0px;
+  }
+  100% {
+    translate: 0vw 0px;
+  }
+}
