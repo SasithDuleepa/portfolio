@@ -25,6 +25,12 @@ export default function App() {
               setTimeout(() => setPrevPage(<Home />), 1000);
             }}
           >
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-filled/50/home.png"
+              alt="home"
+            />
             Home
           </button>
           <button
@@ -37,6 +43,12 @@ export default function App() {
               setTimeout(() => setPrevPage(<About />), 1000);
             }}
           >
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-filled/50/guest-male--v1.png"
+              alt="guest-male--v1"
+            />
             About
           </button>
 
@@ -50,6 +62,12 @@ export default function App() {
               setTimeout(() => setPrevPage(<Projects />), 1000);
             }}
           >
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-filled/100/group-of-projects.png"
+              alt="group-of-projects"
+            />
             Projects
           </button>
           <button
@@ -62,6 +80,12 @@ export default function App() {
               setTimeout(() => setPrevPage(<Contact />), 1000);
             }}
           >
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-filled/100/speech-bubble-with-dots.png"
+              alt="speech-bubble-with-dots"
+            />
             Contact
           </button>
         </div>

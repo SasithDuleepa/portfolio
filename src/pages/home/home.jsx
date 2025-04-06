@@ -1,35 +1,47 @@
 import React from "react";
 import "./home.css";
+import TypeWriter from "../../components/typeWritter";
+
+import MyImg from "./../../assets/img/my-img.jpg";
 
 export default function Home() {
+  const typeWriter = [
+    "Frontend Developer",
+    "BackEnd Developer",
+    "IoT Developer",
+    "Full-Stack Developer",
+  ];
   return (
     <div className="home">
-      {/* <div className="home-background">
-        <div className="background-up">
-          <p className="background-up-p">HELLO!</p>
+      <div className="home-left">
+        <div className="home-intro-container">
+          <p className="text-header-main">Hello my name is</p>
+          <p className="home-name">Sasith Duleepa</p>
         </div>
-        <div className="background-down">
-          <p className="background-down-p">WELCOME TO MY WORLD!</p>
+
+        <div className="home-my-intro">
+          <p className="text-header">I am a</p>
+          <p className="home-role">
+            <TypeWriter className="home-role" data={typeWriter} />
+          </p>
+        </div>
+
+        <div>
+          <p className="text-content">
+            is simply dummy text of the printing and typesetting industry. Lorem
+            Ipsum has been the industry's standard dummy text ever since the
+            1500s, when an unknown printer took a galley of type and scrambled
+            it
+          </p>
+        </div>
+
+        <button className="home-more-btn">More about me</button>
+      </div>
+      <div className="home-right">
+        <div className="">
+          <img src={MyImg} className="home-img" />
         </div>
       </div>
-
-      <div className="home-main">
-        <p></p>
-        <div className="main-intro">
-          <p className="main-intro-p">Hello, I am a</p>
-          <div className="table center">
-            <div className="monitor-wrapper center">
-              <p class="monitor center">
-                | front-end developer | back-end developer | full-stack
-                developer | IoT System Developer |
-              </p>
-            </div>
-          </div>
-        </div>
-        <p contentEditable className="home_name">
-          Sasith Duleepa
-        </p>
-      </div> */}
     </div>
   );
 }

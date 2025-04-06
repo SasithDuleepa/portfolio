@@ -1,3 +1,30 @@
+:root {
+  --background-color: rgb(21, 19, 24);
+  --foreground-color: rgb(248, 248, 248);
+  --font-color: rgb(230, 103, 18);
+}
+
+.text-header-main {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--foreground-color);
+}
+.text-header {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--foreground-color);
+}
+
+.text-content {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--foreground-color);
+  letter-spacing: 1px;
+}
+
 .app {
   display: flex;
   width: 100vw;
@@ -26,13 +53,16 @@
 }
 
 .sidebar-btn {
-  padding: 10px 20px;
+  padding: 10px 30px;
   width: 250px;
   background-color: rgb(255, 255, 255);
   border: 1px solid white;
   border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
 
-  font-size: 30px;
+  font-size: 34px;
   letter-spacing: 1px;
 
   -webkit-box-shadow: -1px 5px 15px -8px rgba(0, 0, 0, 0.27);
