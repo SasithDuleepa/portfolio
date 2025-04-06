@@ -1,5 +1,113 @@
 .about {
   width: 85vw;
-  height: 100vh;
-  background-color: yellow;
+  height: 150vh;
+
+  background: linear-gradient(
+    180deg,
+    var(--color1),
+    var(--color2),
+    var(--color3)
+  );
+  padding: 0px 40px;
+}
+[data-theme="light"] {
+  --color1: rgba(0, 7, 10, 1) 27%;
+  --color2: rgba(9, 67, 85, 1) 67%;
+  --color3: rgba(34, 108, 122, 1) 99%;
+}
+[data-theme="dark"] {
+  --color1: rgb(159, 219, 245) 27%;
+  --color2: rgb(133, 227, 255) 67%;
+  --color3: rgb(54, 166, 189) 99%;
+}
+
+.about-title-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-title-line1 {
+  height: 5px;
+  background-color: var(--font-color);
+  width: 120px;
+  margin-top: -35px;
+  border-radius: 00px 100px 100px 00px;
+}
+.about-title-line2 {
+  height: 5px;
+  background-color: var(--font-color);
+  width: 100px;
+  margin-top: 5px;
+  border-radius: 00px 100px 100px 00px;
+}
+
+.about-intro-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.about-intro-p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--font-color);
+}
+
+.about-content {
+  margin-right: 80px;
+}
+
+.about-skills-container {
+  width: calc(85vw - 80px);
+  height: 200px;
+  /* background-color: aquamarine; */
+}
+.about-skills-left-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  width: calc((85vw - 80px) / 1.8);
+}
+.about-skills-left-p-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: calc(85vw - 80px) / 3.7;
+}
+.about-skills-left-p1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--foreground-color);
+  letter-spacing: 1px;
+}
+.about-skills-left-p2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 27px;
+  font-weight: 500;
+  color: var(--foreground-color);
+  letter-spacing: 1px;
+}
+.about-skills-left-btn-div {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+}
+.about-skills-left-btn {
+  background-color: var(--font-color);
+  padding: 15px 35px;
+  border-radius: 100px;
+  border: 2px solid var(--font-color);
+
+  color: var(--foreground-color);
+  font-size: 24px;
+  font-weight: 500;
+  transition: 0.4s;
+
+  &:hover {
+    background-color: transparent;
+  }
 }
