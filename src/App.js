@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+
+import useLocalStorage from "use-local-storage";
 import "./App.css";
 
 import Home from "./pages/home/home";
@@ -11,8 +13,23 @@ export default function App() {
   const [prevPage, setPrevPage] = useState(<Home />);
 
   const [animClass, setAnimClass] = useState("right-left"); // default
+
+  const defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [theme, setTheme] = useLocalStorage(
+    "theme",
+    defaultDark ? "dark" : "light"
+  );
+  const [themeColor, setThemeColor] = useLocalStorage("orange");
+
+  const switchMode = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  };
+  const switchTheme = (color) => {
+    setThemeColor(color);
+  };
   return (
-    <div className="app">
+    <div className="app" data-theme={theme} data-theme-color={themeColor}>
       <div className="sidebar">
         <div className="sidebar-links-div">
           <button
@@ -90,6 +107,51 @@ export default function App() {
           </button>
         </div>
       </div>
+
+      <button className="theme-btn" onClick={switchMode}>
+        <img
+          width="26"
+          height="26"
+          className="theme-img"
+          src={
+            theme === "light"
+              ? "https://img.icons8.com/external-others-amoghdesign/24/external-dark-multimedia-solid-30px-others-amoghdesign.png"
+              : "https://img.icons8.com/sf-black-filled/64/FFFFFF/sun.png"
+          }
+          alt="external-dark-multimedia-solid-30px-others-amoghdesign"
+        />
+      </button>
+
+      <div className="theme-div">
+        <img
+          className="theme-arrow"
+          src="https://img.icons8.com/ios/100/double-left.png"
+          alt="double-left"
+        />
+
+        <button className="theme-color-show"></button>
+        <button
+          onClick={() => switchTheme("orange")}
+          className="theme-color-btn"
+          style={{ backgroundColor: "rgb(255, 77, 0)" }}
+        ></button>
+        <button
+          onClick={() => switchTheme("green")}
+          className="theme-color-btn"
+          style={{ backgroundColor: "rgb(0, 255, 26)" }}
+        ></button>
+        <button
+          onClick={() => switchTheme("purple")}
+          className="theme-color-btn"
+          style={{ backgroundColor: "rgb(255, 0, 247)" }}
+        ></button>
+        <button
+          onClick={() => switchTheme("blue")}
+          className="theme-color-btn"
+          style={{ backgroundColor: "rgb(0, 102, 255)" }}
+        ></button>
+      </div>
+
       <div className="page-div ">
         <div className="prev-page">{prevPage}</div>
         <div className={`page ${animClass}`}>{page}</div>

@@ -35,7 +35,7 @@ export default function Home() {
           </p>
         </div>
 
-        <button className="home-more-btn">More about me</button>
+        <button className="home-more-btn">More About Me</button>
       </div>
       <div className="home-right">
         <div className="">

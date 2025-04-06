@@ -3,6 +3,84 @@
   --foreground-color: rgb(248, 248, 248);
   --font-color: rgb(230, 103, 18);
 }
+[data-theme="dark"] {
+  --background-color: rgb(255, 255, 255);
+  --foreground-color: rgb(0, 0, 0);
+  --font-color: rgb(230, 103, 18);
+}
+[data-theme-color="orange"] {
+  --font-color: rgb(230, 103, 18);
+}
+[data-theme-color="green"] {
+  --font-color: rgb(0, 255, 60);
+}
+[data-theme-color="purple"] {
+  --font-color: rgb(247, 0, 255);
+}
+[data-theme-color="blue"] {
+  --font-color: rgb(0, 8, 255);
+}
+
+.theme-btn {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  z-index: 12;
+  padding: 12px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 100px;
+  background-color: var(--foreground-color);
+}
+.theme-div {
+  position: fixed;
+  right: 10px;
+  top: 80px;
+  width: 95px;
+
+  height: 55px;
+  background-color: rgba(126, 126, 126, 0.349);
+  z-index: 12;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 5px;
+  padding-right: 10px;
+  overflow: hidden;
+  transition: 0.4s;
+
+  &:hover {
+    width: 260px;
+    background-color: rgba(126, 126, 126, 0.615);
+
+    .theme-color-show {
+      display: none;
+    }
+  }
+}
+.theme-arrow {
+  width: 40px;
+  height: 40px;
+  color: var(--font-color);
+}
+.theme-color-btn {
+  height: 45px;
+  min-width: 45px !important;
+  border-radius: 100px;
+  border: none;
+}
+.theme-color-show {
+  height: 45px;
+  min-width: 45px !important;
+  border-radius: 100px;
+  border: none;
+  background-color: var(--font-color);
+}
 
 .text-header-main {
   font-family: Arial, Helvetica, sans-serif;
