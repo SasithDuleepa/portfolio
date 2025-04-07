@@ -152,10 +152,10 @@
   position: absolute;
   right: 0px;
   width: 85vw;
-  min-height: 100vh;
+  height: 100vh;
+  overflow-y: auto; /* ✅ Enable vertical scrolling */
   overflow-x: hidden;
-
-  /* background-color: rgb(255, 0, 0); */
+  scroll-behavior: smooth; /* ✅ Enable smooth scroll on this element */
 }
 
 .page {
@@ -165,16 +165,20 @@
 }
 .prev-page {
   z-index: 0;
-  position: absolute;
+  position: relative;
   top: 0;
+  height: 100vh;
+  scroll-behavior: smooth;
 }
 
 /* these part add for page landing animations */
 .right-left {
   animation: right_left 1s ease-out forwards;
+  z-index: 1;
 }
 .right_left {
   animation: right__left 1s ease-out forwards;
+  z-index: 1;
 }
 @keyframes right_left {
   0% {

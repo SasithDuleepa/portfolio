@@ -35,11 +35,19 @@ export default function App() {
           <button
             className="sidebar-btn"
             onClick={() => {
-              setAnimClass(
-                animClass === "right-left" ? "right_left" : "right-left"
-              );
-              setPage(<Home />);
-              setTimeout(() => setPrevPage(<Home />), 1000);
+              const container = document.querySelector(".page-div");
+
+              // Scroll to top first
+              container.scrollTo({ top: 0, behavior: "smooth" });
+
+              // Then load the new page AFTER scroll end
+              setTimeout(() => {
+                setAnimClass(
+                  animClass === "right-left" ? "right_left" : "right-left"
+                );
+                setPage(<Home />);
+                setTimeout(() => setPrevPage(<Home />), 1000);
+              }, 500);
             }}
           >
             <img
@@ -53,11 +61,19 @@ export default function App() {
           <button
             className="sidebar-btn"
             onClick={() => {
-              setAnimClass(
-                animClass === "right-left" ? "right_left" : "right-left"
-              );
-              setPage(<About />);
-              setTimeout(() => setPrevPage(<About />), 1000);
+              const container = document.querySelector(".page-div");
+
+              // Scroll to top first
+              container.scrollTo({ top: 0, behavior: "smooth" });
+
+              // Then load the new page AFTER scroll end
+              setTimeout(() => {
+                setAnimClass(
+                  animClass === "right-left" ? "right_left" : "right-left"
+                );
+                setPage(<About />);
+                setTimeout(() => setPrevPage(<About />), 1000);
+              }, 500);
             }}
           >
             <img
@@ -72,11 +88,19 @@ export default function App() {
           <button
             className="sidebar-btn"
             onClick={() => {
-              setAnimClass(
-                animClass === "right-left" ? "right_left" : "right-left"
-              );
-              setPage(<Projects />);
-              setTimeout(() => setPrevPage(<Projects />), 1000);
+              const container = document.querySelector(".page-div");
+
+              // Scroll to top first
+              container.scrollTo({ top: 0, behavior: "smooth" });
+
+              // Then load the new page AFTER scroll end
+              setTimeout(() => {
+                setAnimClass(
+                  animClass === "right-left" ? "right_left" : "right-left"
+                );
+                setPage(<Projects />);
+                setTimeout(() => setPrevPage(<Projects />), 1000);
+              }, 500);
             }}
           >
             <img
@@ -90,11 +114,19 @@ export default function App() {
           <button
             className="sidebar-btn"
             onClick={() => {
-              setAnimClass(
-                animClass === "right-left" ? "right_left" : "right-left"
-              );
-              setPage(<Contact />);
-              setTimeout(() => setPrevPage(<Contact />), 1000);
+              const container = document.querySelector(".page-div");
+
+              // Scroll to top first
+              container.scrollTo({ top: 0, behavior: "smooth" });
+
+              // Then load the new page AFTER scroll end
+              setTimeout(() => {
+                setAnimClass(
+                  animClass === "right-left" ? "right_left" : "right-left"
+                );
+                setPage(<Contact />);
+                setTimeout(() => setPrevPage(<Contact />), 1000);
+              }, 500);
             }}
           >
             <img

@@ -82,7 +82,17 @@ export default function About() {
             <button className="about-skills-left-btn">Hire Me</button>
           </div>
         </div>
-        <div></div>
+        <div className="about-skills-right-div">
+          <p className="about-skills-right-p1">Skills</p>
+
+          <ul>
+            <li className="js about-skills-left-p2">JS</li>
+            <li className="react about-skills-left-p2">React</li>
+            <li className="html5 about-skills-left-p2">HTML5</li>
+            <li className="css3 about-skills-left-p2">CSS3</li>
+            <li className="sketch about-skills-left-p2">Sketch</li>
+          </ul>
+        </div>
       </div>
     </div>
   );

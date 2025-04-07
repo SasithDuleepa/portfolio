@@ -62,12 +62,14 @@
   width: calc(85vw - 80px);
   height: 200px;
   /* background-color: aquamarine; */
+  display: flex;
+  justify-content: space-between;
 }
 .about-skills-left-div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px;
+  gap: 0px;
   width: calc((85vw - 80px) / 1.8);
 }
 .about-skills-left-p-div {
@@ -95,6 +97,7 @@
   align-items: center;
   justify-content: start;
   gap: 20px;
+  margin: 20px 0px;
 }
 .about-skills-left-btn {
   background-color: var(--font-color);
@@ -109,5 +112,128 @@
 
   &:hover {
     background-color: transparent;
+  }
+}
+
+.about-skills-right-div {
+  display: flex;
+  flex-direction: column;
+  width: calc((85vw - 80px) / 2.5);
+}
+.about-skills-right-p1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--foreground-color);
+  letter-spacing: 1px;
+  margin-bottom: -30px;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  width: calc((85vw - 120px) / 2.5);
+}
+
+li {
+  list-style: none;
+  color: var(--foreground-color);
+  font-size: 18px;
+  margin: 48px 0;
+  position: relative;
+}
+
+li::before,
+li::after {
+  content: "";
+  display: block;
+  height: 16px;
+  width: 100%;
+  background-color: #1f4a59;
+  position: absolute;
+  bottom: -28px;
+  border-radius: 6px;
+}
+
+li::before {
+  background-color: var(--foreground-color);
+}
+
+li::after {
+  background-color: var(--font-color);
+}
+
+li::after {
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.js::after {
+  animation-name: js;
+}
+
+.react::after {
+  animation-name: react;
+}
+
+.html5::after {
+  animation-name: html5;
+}
+
+.css3::after {
+  animation-name: css3;
+}
+
+.sketch::after {
+  animation-name: sketch;
+}
+
+@keyframes js {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+@keyframes react {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes html5 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+@keyframes css3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes sketch {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
   }
 }
