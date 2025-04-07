@@ -3,7 +3,7 @@
   height: 100vh;
   /* background-color: rgb(7, 27, 27); */
   background: linear-gradient(
-    180deg,
+    190deg,
     var(--color1),
     var(--color2),
     var(--color3)
@@ -16,14 +16,14 @@
 }
 
 [data-theme="light"] {
-  --color1: rgba(0, 7, 10, 1) 27%;
-  --color2: rgba(9, 67, 85, 1) 67%;
-  --color3: rgba(34, 108, 122, 1) 99%;
+  --color1: rgba(2, 26, 36, 1) 17%;
+  --color2: rgb(7, 31, 38) 67%;
+  --color3: rgb(5, 23, 23) 99%;
 }
 [data-theme="dark"] {
-  --color1: rgb(159, 219, 245) 27%;
-  --color2: rgb(133, 227, 255) 67%;
-  --color3: rgb(54, 166, 189) 99%;
+  --color1: rgb(6, 121, 159) 27%;
+  --color2: rgb(27, 160, 163) 67%;
+  --color3: rgb(29, 103, 156) 99%;
 }
 
 .home-left {

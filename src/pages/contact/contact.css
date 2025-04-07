@@ -1,5 +1,142 @@
 .contact {
   width: 85vw;
-  height: 100vh;
-  background-color: rgb(0, 4, 255);
+  height: 150vh;
+
+  background: linear-gradient(
+    180deg,
+    var(--color1),
+    var(--color2),
+    var(--color3)
+  );
+  padding: 0px 40px;
+}
+[data-theme="light"] {
+  --color1: rgba(0, 7, 10, 1) 27%;
+  --color2: rgba(9, 67, 85, 1) 67%;
+  --color3: rgba(34, 108, 122, 1) 99%;
+}
+[data-theme="dark"] {
+  --color1: rgb(159, 219, 245) 27%;
+  --color2: rgb(133, 227, 255) 67%;
+  --color3: rgb(54, 166, 189) 99%;
+}
+
+.contact-main-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--font-color);
+  text-align: center;
+}
+.contact-sub-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--foreground-color);
+  text-transform: uppercase;
+  text-align: center;
+}
+.contact-card-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80vw;
+  margin: 80px 0px;
+}
+
+.contact-message-container {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.contact-message-upper-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.contact-input {
+  width: 100%;
+  background-color: var(--foreground-color);
+  opacity: 0.5;
+  height: 50px;
+  border: 3px solid var(--font-color);
+  border-radius: 100px;
+  padding: 0px 20px;
+}
+.contact_input {
+  background-color: var(--foreground-color);
+  opacity: 0.5;
+  height: 50px;
+  border: 3px solid var(--font-color);
+  border-radius: 100px;
+  padding: 0px 20px;
+}
+.contact-input-text {
+  width: 98%;
+  position: relative;
+  background-color: var(--foreground-color);
+  opacity: 0.5;
+  height: 100px;
+  border: 3px solid var(--font-color);
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.contact-message-btn-div {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 40px;
+}
+.contact-message-btn {
+  padding: 15px 40px;
+  background-color: var(--font-color);
+  border: 2px solid var(--font-color);
+  border-radius: 100px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--foreground-color);
+  transition: 0.4s;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.contact-card {
+  width: 10vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.card-svg {
+  height: 50px;
+  color: var(--font-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-card-p1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--foreground-color);
+  text-align: center;
+  line-height: 10px;
+  margin-top: 30px;
+}
+
+.contact-card-p2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--foreground-color);
+  text-align: center;
+  line-height: 30px;
+  margin-top: 15px;
 }

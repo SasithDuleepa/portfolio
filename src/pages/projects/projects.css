@@ -1,5 +1,106 @@
 .projects {
   width: 85vw;
-  height: 100vh;
-  background-color: rgb(0, 255, 89);
+  /* height: 100vh; */
+
+  background: linear-gradient(
+    180deg,
+    var(--color1),
+    var(--color2),
+    var(--color3)
+  );
+  padding: 0px 40px;
+}
+[data-theme="light"] {
+  --color1: rgba(0, 7, 10, 1) 27%;
+  --color2: rgba(9, 67, 85, 1) 67%;
+  --color3: rgba(34, 108, 122, 1) 99%;
+}
+[data-theme="dark"] {
+  --color1: rgb(159, 219, 245) 27%;
+  --color2: rgb(133, 227, 255) 67%;
+  --color3: rgb(54, 166, 189) 99%;
+}
+
+.project-card-container {
+  width: 81vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 100px 0px;
+}
+.project-card {
+  width: 15vw;
+  height: 45vh;
+  padding: 10px;
+  background-color: var(--foreground-color);
+  box-shadow: 0 3px 10px var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project-card-img-div {
+  background-color: rgba(137, 43, 226, 0);
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transition: 0.4s;
+
+  &:hover {
+    background-color: var(--font-color);
+
+    svg {
+      color: aliceblue;
+    }
+  }
+
+  svg {
+    color: var(--font-color);
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+  }
+}
+
+.project-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project-card-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  color: var(--background-color);
+  line-height: 10px;
+}
+.project-card-desc {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--background-color);
+  text-align: justify;
+  margin: auto 10px;
+  height: 16vh;
+  overflow: hidden;
+}
+.project-card-btn {
+  padding: 8px 16px;
+  background-color: var(--font-color);
+  border: 2px solid var(--font-color);
+  border-radius: 100px;
+  color: var(--foreground-color);
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.4s;
+
+  &:hover {
+    background-color: transparent;
+    color: var(--font-color);
+  }
 }
