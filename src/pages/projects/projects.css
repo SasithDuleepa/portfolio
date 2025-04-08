@@ -29,6 +29,10 @@
   gap: 20px;
   padding: 100px 0px;
 }
+.project-p {
+  margin-right: 80px;
+  text-align: justify;
+}
 .project-card {
   width: 15vw;
   height: 45vh;
@@ -71,13 +75,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 .project-card-title {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 35px;
-  font-weight: 700;
+  font-size: 28px;
+  font-weight: 600;
   color: var(--background-color);
-  line-height: 10px;
+  line-height: 35px;
+  text-align: center;
+  min-height: 90px;
 }
 .project-card-desc {
   font-family: Arial, Helvetica, sans-serif;
@@ -85,8 +92,8 @@
   font-weight: 500;
   color: var(--background-color);
   text-align: justify;
-  margin: auto 10px;
-  height: 16vh;
+  margin: -30px 10px auto 10px;
+  height: 12vh;
   overflow: hidden;
 }
 .project-card-btn {

@@ -1,6 +1,7 @@
 .home {
   width: 85vw;
-  height: 100vh;
+  min-height: 100vh;
+
   /* background-color: rgb(7, 27, 27); */
   background: linear-gradient(
     190deg,
@@ -37,7 +38,7 @@
 }
 .home-name {
   font-family: "Updock", cursive;
-  font-size: 48px;
+  font-size: clamp(2rem, 2vw, 2.5rem);
   font-weight: 600;
   color: var(--font-color);
   letter-spacing: 1px;
@@ -51,11 +52,11 @@
 
 .home-role {
   color: var(--font-color);
-  font-size: 40px;
+  font-size: clamp(2rem, 2vw, 2rem);
   font-weight: 700;
   border-right: 5px solid var(--font-color);
   padding: 0px 5px 0px 10px;
-  line-height: 99%;
+  height: 7vh;
 }
 
 .home-more-btn {
@@ -65,7 +66,7 @@
   border: 2px solid var(--font-color);
 
   color: var(--foreground-color);
-  font-size: 26px;
+  font-size: clamp(1rem, 1vw, 2.5rem);
   font-weight: 500;
   transition: 0.4s;
 
@@ -90,4 +91,67 @@
   -webkit-mask: conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
       calc(100% - var(--s)) calc(100% - var(--s)),
     linear-gradient(#000 0 0) content-box;
+}
+
+@media (max-width: 768px) {
+  .home {
+    width: 100vw;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 10px;
+  }
+  .home-left {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .home-div2 {
+    width: 95vw;
+    text-align: justify;
+  }
+  .home-my-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+  }
+  .home-role {
+    margin-top: -30px;
+  }
+  .home-intro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: centers;
+    margin-top: 2rem;
+  }
+  .home-name {
+    font-family: "Updock", cursive;
+    font-size: clamp(2rem, 2vw, 2.5rem);
+    font-weight: 600;
+    color: var(--font-color);
+    letter-spacing: 1px;
+    margin-top: -10px;
+    text-align: center;
+  }
+  .home-more-btn {
+    margin: 0px 80px;
+  }
+
+  .home-right {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+  .home-img {
+    width: 30vw;
+    height: auto;
+
+    --s: 40px; /* the size on the corner */
+
+    padding: 10px; /* the gap between the border and image */
+    border: 5px solid #b38184; /* the thickness and color */
+    -webkit-mask: conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
+        calc(100% - var(--s)) calc(100% - var(--s)),
+      linear-gradient(#000 0 0) content-box;
+  }
 }

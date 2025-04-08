@@ -4,7 +4,7 @@ import TypeWriter from "../../components/typeWritter";
 
 import MyImg from "./../../assets/img/my-img.jpg";
 
-export default function Home() {
+export default function Home({ More }) {
   const typeWriter = [
     "Frontend Developer",
     "BackEnd Developer",
@@ -26,7 +26,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div>
+        <div className="home-div2">
           <p className="text-content">
             is simply dummy text of the printing and typesetting industry. Lorem
             Ipsum has been the industry's standard dummy text ever since the
@@ -35,7 +35,9 @@ export default function Home() {
           </p>
         </div>
 
-        <button className="home-more-btn">More About Me</button>
+        <button className="home-more-btn" onClick={More}>
+          More About Me
+        </button>
       </div>
       <div className="home-right">
         <div className="">

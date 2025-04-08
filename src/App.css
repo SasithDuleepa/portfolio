@@ -23,8 +23,8 @@
 
 .theme-btn {
   position: fixed;
-  right: 10px;
-  top: 10px;
+  right: 20px;
+  top: 15px;
   z-index: 12;
   padding: 12px;
   width: 40px;
@@ -38,11 +38,11 @@
 }
 .theme-div {
   position: fixed;
-  right: 10px;
-  top: 80px;
-  width: 95px;
+  right: 20px;
+  top: 70px;
+  width: 63px;
 
-  height: 55px;
+  height: 40px;
   background-color: rgba(126, 126, 126, 0.349);
   z-index: 12;
   border-radius: 100px;
@@ -55,7 +55,7 @@
   transition: 0.4s;
 
   &:hover {
-    width: 260px;
+    width: 183px;
     background-color: rgba(126, 126, 126, 0.615);
 
     .theme-color-show {
@@ -64,19 +64,19 @@
   }
 }
 .theme-arrow {
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 30px;
   color: var(--font-color);
 }
 .theme-color-btn {
-  height: 45px;
-  min-width: 45px !important;
+  height: 30px;
+  min-width: 30px !important;
   border-radius: 100px;
   border: none;
 }
 .theme-color-show {
-  height: 45px;
-  min-width: 45px !important;
+  height: 30px;
+  min-width: 30px !important;
   border-radius: 100px;
   border: none;
   background-color: var(--font-color);
@@ -84,20 +84,20 @@
 
 .text-header-main {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 40px;
+  font-size: clamp(2rem, 3vw, 3.8em);
   font-weight: 700;
   color: var(--foreground-color);
 }
 .text-header {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 45px;
+  font-size: clamp(2rem, 2vw, 2.5rem);
   font-weight: 700;
   color: var(--foreground-color);
 }
 
 .text-content {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
+  font-size: clamp(1rem, 2vw, 2.5rem);
   font-weight: 500;
   color: var(--foreground-color);
   letter-spacing: 1px;
@@ -182,7 +182,7 @@
 }
 @keyframes right_left {
   0% {
-    translate: 100vw 0px;
+    translate: 90vw 0px;
   }
   100% {
     translate: 0vw 0px;
@@ -190,9 +190,24 @@
 }
 @keyframes right__left {
   0% {
-    translate: 100vw 0px;
+    translate: 90vw 0px;
   }
   100% {
     translate: 0vw 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .page-div {
+    position: absolute;
+    right: 0px;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto; /* ✅ Enable vertical scrolling */
+    /* overflow-x: hidden; */
+    scroll-behavior: smooth; /* ✅ Enable smooth scroll on this element */
   }
 }

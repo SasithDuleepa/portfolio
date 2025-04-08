@@ -9,7 +9,22 @@ import Contact from "./pages/contact/contact";
 import Projects from "./pages/projects/projects";
 
 export default function App() {
-  const [page, setPage] = useState(<Home />);
+  const HandleMore = () => {
+    setTimeout(() => {
+      setAnimClass(animClass === "right-left" ? "right_left" : "right-left");
+      setPage(<About />);
+      setTimeout(() => setPrevPage(<About />), 1000);
+    }, 500);
+  };
+  const HandleHire = () => {
+    setTimeout(() => {
+      setAnimClass(animClass === "right-left" ? "right_left" : "right-left");
+      setPage(<Contact />);
+      setTimeout(() => setPrevPage(<Contact />), 1000);
+    }, 500);
+  };
+
+  const [page, setPage] = useState(<Home More={HandleMore} />);
   const [prevPage, setPrevPage] = useState(<Home />);
 
   const [animClass, setAnimClass] = useState("right-left"); // default
@@ -28,6 +43,7 @@ export default function App() {
   const switchTheme = (color) => {
     setThemeColor(color);
   };
+
   return (
     <div className="app" data-theme={theme} data-theme-color={themeColor}>
       <div className="sidebar">
@@ -45,7 +61,7 @@ export default function App() {
                 setAnimClass(
                   animClass === "right-left" ? "right_left" : "right-left"
                 );
-                setPage(<Home />);
+                setPage(<Home More={HandleMore} />);
                 setTimeout(() => setPrevPage(<Home />), 1000);
               }, 500);
             }}
@@ -71,7 +87,7 @@ export default function App() {
                 setAnimClass(
                   animClass === "right-left" ? "right_left" : "right-left"
                 );
-                setPage(<About />);
+                setPage(<About Hire={HandleHire} />);
                 setTimeout(() => setPrevPage(<About />), 1000);
               }, 500);
             }}

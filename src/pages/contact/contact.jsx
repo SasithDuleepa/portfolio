@@ -1,11 +1,35 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import "./contact.css";
 
 export default function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    // Pass the form object directly as the third argument
+    emailjs
+      .sendForm(
+        `${process.env.REACT_APP_EMAILJS_SERVICE_ID}`,
+        `${process.env.REACT_APP_EMAILJS_TEMPLATE_ID}`,
+        form.current,
+        `${process.env.REACT_APP_EMAILJS_PUBLIC_KEY}`
+      )
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error);
+        }
+      );
+  };
   return (
     <div className="contact">
       <div className="about-title-div">
         <p className="text-header-main">Contact Me</p>
+
         <div className="about-title-line1"></div>
         <div className="about-title-line2"></div>
       </div>
@@ -53,18 +77,43 @@ export default function Contact() {
         <p className="contact-sub-text">I'm very responsive to messages</p>
       </div>
 
-      <div className="contact-message-container">
+      <form
+        ref={form}
+        onSubmit={sendEmail}
+        className="contact-message-container"
+      >
         <div className="contact-message-upper-container">
-          <input className="contact-input" placeholder="Name" />
-          <input className="contact-input" placeholder="Email" />
+          <input
+            className="contact-input"
+            type="text"
+            placeholder="Name"
+            name="name"
+          />
+          <input
+            className="contact-input"
+            type="email"
+            placeholder="Email"
+            name="email"
+          />
         </div>
-        <input className="contact_input" placeholder="Subject" />
-        <textarea className="contact-input-text" placeholder="Message" />
+        <input
+          className="contact_input"
+          type="text"
+          placeholder="Subject"
+          name="subject"
+        />
+        <textarea
+          className="contact-input-text"
+          placeholder="Message"
+          name="message"
+        />
 
         <div className="contact-message-btn-div">
-          <button className="contact-message-btn">Send Message</button>
+          <button className="contact-message-btn" type="submit">
+            Send Message
+          </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 }
