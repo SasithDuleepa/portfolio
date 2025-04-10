@@ -3,6 +3,9 @@
   --foreground-color: rgb(248, 248, 248);
   --font-color: rgb(230, 103, 18);
   --theme-color: rgb(230, 103, 18);
+  --background-color1: rgb(7, 95, 124) 27%;
+  --background-color2: rgb(13, 160, 162) 67%;
+  --background-color3: rgb(28, 124, 193) 99%;
   --text-primary-color: #3f3d3d;
   --text-secondary-color: #525a61;
 }
@@ -11,20 +14,27 @@
   --foreground-color: rgb(0, 0, 0);
   --font-color: rgb(230, 103, 18);
   --theme-color: rgb(230, 103, 18);
+  --background-color1: rgb(3, 53, 70) 27%;
+  --background-color2: rgb(5, 70, 71) 67%;
+  --background-color3: rgb(9, 47, 75) 99%;
   --text-primary-color: #ffffff;
   --text-secondary-color: #dbd2d2;
 }
 [data-theme-color="orange"] {
   --font-color: rgb(230, 103, 18);
+  --theme-color: rgb(230, 103, 18);
 }
 [data-theme-color="green"] {
   --font-color: rgb(0, 255, 60);
+  --theme-color: rgb(0, 255, 60);
 }
 [data-theme-color="purple"] {
   --font-color: rgb(247, 0, 255);
+  --theme-color: rgb(247, 0, 255);
 }
 [data-theme-color="blue"] {
   --font-color: rgb(0, 8, 255);
+  --theme-color: rgb(0, 8, 255);
 }
 
 .theme-btn {

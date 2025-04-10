@@ -5,26 +5,15 @@
   /* background-color: rgb(7, 27, 27); */
   background: linear-gradient(
     190deg,
-    var(--color1),
-    var(--color2),
-    var(--color3)
+    var(--background-color1),
+    var(--background-color2),
+    var(--background-color3)
   );
 
   display: flex;
   align-items: center;
 
   padding: 0px 40px;
-}
-
-[data-theme="light"] {
-  --color1: rgba(2, 26, 36, 1) 17%;
-  --color2: rgb(7, 31, 38) 67%;
-  --color3: rgb(5, 23, 23) 99%;
-}
-[data-theme="dark"] {
-  --color1: rgb(6, 121, 159) 27%;
-  --color2: rgb(27, 160, 163) 67%;
-  --color3: rgb(29, 103, 156) 99%;
 }
 
 .home-left {
@@ -86,7 +75,7 @@
   --s: 50px; /* the size on the corner */
 
   padding: 20px; /* the gap between the border and image */
-  border: 5px solid #b38184; /* the thickness and color */
+  border: 5px solid var(--theme-color); /* the thickness and color */
   -webkit-mask: conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
       calc(100% - var(--s)) calc(100% - var(--s)),
     linear-gradient(#000 0 0) content-box;
